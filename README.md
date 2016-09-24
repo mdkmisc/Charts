@@ -156,6 +156,8 @@ Charts::new('bar', 'highcharts')
 
 Note: The labels must have the country codes, not the name.
 
+Note 2: To add color to the chart, you'll need to provide an array of at least 2 colors. The first is the min and the second the max.
+
 ```
 Charts::new('geo', 'highcharts')
 	->setTitle('My nice chart')
