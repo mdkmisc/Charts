@@ -1,12 +1,15 @@
 <?php
+
 $graph = "
     <script type='text/javascript'>
         $(function () {
             $('#$this->id').highcharts({
                 chart: {
-                    "; if(!$this->responsive) $graph .= "
+                    "; if (!$this->responsive) {
+    $graph .= "
                         width: $this->width,
                         height: $this->height,";
+}
                     $graph .= " 
                     plotBackgroundColor: null,
                     plotBorderWidth: null,
@@ -25,10 +28,10 @@ $graph = "
                xAxis: {
                     categories: [
                         ";
-                        foreach($this->labels as $label){
+                        foreach ($this->labels as $label) {
                             $graph .= "'$label',";
                         }
-                        $graph .="
+                        $graph .= "
                     ],
                     crosshair: true
                 },
@@ -36,10 +39,10 @@ $graph = "
                     name: '$this->element_label',
                     data: [
                     ";
-                    foreach($this->values as $dta){
+                    foreach ($this->values as $dta) {
                         $graph .= "$dta,";
                     }
-                    $graph .="
+                    $graph .= "
                     ]
                 }]
             });
@@ -47,4 +50,5 @@ $graph = "
     </script>
     <div id='$this->id'></div>
 ";
+
 return $graph;

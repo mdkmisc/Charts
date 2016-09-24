@@ -1,12 +1,15 @@
 <?php
+
 $graph = "
     <script type='text/javascript'>
         $(function () {
             $('#$this->id').highcharts({
                 chart: {
-                    "; if(!$this->responsive) $graph .= "
+                    "; if (!$this->responsive) {
+    $graph .= "
                         width: $this->width,
                         height: $this->height,";
+}
                     $graph .= "              
                     plotBackgroundColor: null,
                     plotBorderWidth: null,
@@ -37,13 +40,13 @@ $graph = "
                     data: [
                     ";
                     $i = 0;
-                    foreach($this->values as $dta){
+                    foreach ($this->values as $dta) {
                         $e = $this->labels[$i];
                         $v = $dta;
                         $graph .= "{name: '$e', y: $v},";
                         $i++;
                     }
-                    $graph .="
+                    $graph .= "
                     ]
                 }]
             });
@@ -51,4 +54,5 @@ $graph = "
     </script>
     <div id='$this->id'></div>
 ";
+
 return $graph;

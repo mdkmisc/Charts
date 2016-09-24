@@ -1,11 +1,12 @@
 <?php
+
 // Get the max / min index
 $max = 0;
 $min = $this->values ? $this->values[0] : 0;
-foreach($this->values as $dta) {
-    if($dta > $max) {
+foreach ($this->values as $dta) {
+    if ($dta > $max) {
         $max = $dta;
-    } elseif($dta < $min) {
+    } elseif ($dta < $min) {
         $min = $dta;
     }
 }
@@ -16,11 +17,13 @@ $graph = "
             // Initiate the chart
             $('#$this->id').highcharts('Map', {
 
-                "; if(!$this->responsive) $graph .= "
+                "; if (!$this->responsive) {
+    $graph .= "
                     chart: {
                         width: $this->width,
                         height: $this->height,
                     },";
+}
                 $graph .= "
 
                 title : {
@@ -34,21 +37,25 @@ $graph = "
 
                 colorAxis: {
                     min: $min,
-                    "; if($this->colors and count($this->colors) >= 2){ $graph .= "minColor: '" . $this->colors[0] . "',"; } $graph .= "
+                    "; if ($this->colors and count($this->colors) >= 2) {
+                    $graph .= "minColor: '".$this->colors[0]."',";
+                } $graph .= "
                     max: $max,
-                    "; if($this->colors and count($this->colors) >= 2){ $graph .= "maxColor: '" . $this->colors[1] . "',"; } $graph .= "
+                    "; if ($this->colors and count($this->colors) >= 2) {
+                    $graph .= "maxColor: '".$this->colors[1]."',";
+                } $graph .= '
                 },
 
                 series : [{
-                    data : [";
+                    data : [';
                       $i = 0;
-                      foreach($this->values as $dta){
+                      foreach ($this->values as $dta) {
                           $e = $this->labels[$i];
                           $v = $dta;
                           $graph .= "{'code': '$e', 'value': $v},";
                           $i++;
                       }
-                      $graph .="
+                      $graph .= "
                     ],
                     mapData: Highcharts.maps['custom/world'],
                     joinBy: ['iso-a2', 'code'],
@@ -64,4 +71,5 @@ $graph = "
     </script>
     <div id='$this->id'></div>
 ";
+
 return $graph;

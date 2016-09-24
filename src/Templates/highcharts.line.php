@@ -1,20 +1,25 @@
 <?php
+
 $graph = "
     <script type='text/javascript'>
         $(function () {
             $('#$this->id').highcharts({
-                "; if(!$this->responsive) $graph .= "
+                "; if (!$this->responsive) {
+    $graph .= "
                     chart: {
                         width: $this->width,
                         height: $this->height,
                     },";
+}
                 $graph .= "
                 title: {
                     text: '$this->title',
                     x: -20 //center
                 },
                 xAxis: {
-                    categories: ["; foreach($this->labels as $label){$graph .= "'" . $label . "',";} $graph .="]
+                    categories: ["; foreach ($this->labels as $label) {
+                    $graph .= "'".$label."',";
+                } $graph .= "]
                 },
                 yAxis: {
                     title: {
@@ -27,11 +32,11 @@ $graph = "
                         color: '#808080'
                     }]
                 },
-                "; if($this->colors){
+                "; if ($this->colors) {
                     $graph .= "
                         plotOptions: {
                             series: {
-                                color: '" . $this->colors[0] . "'
+                                color: '".$this->colors[0]."'
                             }
                         },
                     ";
@@ -45,11 +50,14 @@ $graph = "
                 },
                 series: [{
                     name: '$this->element_label',
-                    data: ["; foreach($this->values as $dta){$graph .= $dta . ',';} $graph .="]
+                    data: ["; foreach ($this->values as $dta) {
+                    $graph .= $dta.',';
+                } $graph .= "]
                 }]
             });
         });
     </script>
     <div id='$this->id'></div>
 ";
+
 return $graph;

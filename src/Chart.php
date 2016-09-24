@@ -28,7 +28,7 @@ class Chart
     public $responsive;
 
     /**
-     * Return a new chart instance
+     * Return a new chart instance.
      *
      * @param $library
      */
@@ -46,126 +46,136 @@ class Chart
         $this->values = [];
         $this->colors = [];
         $this->responsive = config('charts.default.responsive');
-        $this->id = mt_rand(0, 9) .  mt_rand(0, 9) . mt_rand(0, 9) . mt_rand(0, 9) . mt_rand(0, 9) . mt_rand(0, 9) . mt_rand(0, 9) . mt_rand(0, 9);
+        $this->id = mt_rand(0, 9).mt_rand(0, 9).mt_rand(0, 9).mt_rand(0, 9).mt_rand(0, 9).mt_rand(0, 9).mt_rand(0, 9).mt_rand(0, 9);
 
         // Set the chart library
         $this->library = $library ? $library : config('charts.default.library');
     }
 
     /**
-     * Set chart library
+     * Set chart library.
      *
      * @param string $library
      */
     public function setLibrary($library)
     {
         $this->library = $library;
+
         return $this;
     }
 
     /**
-     * Set chart labels
+     * Set chart labels.
      *
      * @param array $labels
      */
     public function setLabels($labels)
     {
         $this->labels = $labels;
+
         return $this;
     }
 
     /**
-     * Set chart values
+     * Set chart values.
      *
      * @param array $values
      */
     public function setValues($values)
     {
         $this->values = $values;
+
         return $this;
     }
 
     /**
-     * Set uf chart is responsive (will ignore dimensions if true)
+     * Set uf chart is responsive (will ignore dimensions if true).
      *
      * @param string $label
      */
     public function setElementLabel($label)
     {
         $this->element_label = $label;
+
         return $this;
     }
 
     /**
-     * Set chart title
+     * Set chart title.
      *
      * @param string $title
      */
     public function setTitle($title)
     {
         $this->title = $title;
+
         return $this;
     }
 
     /**
-     * Set chart colors
+     * Set chart colors.
      *
      * @param array $colors
      */
     public function setColors($colors)
     {
         $this->colors = $colors;
+
         return $this;
     }
 
     /**
-     * Set chart width
+     * Set chart width.
      *
-     * @param integer $width
+     * @param int $width
      */
     public function setWidth($width)
     {
         $this->width = $width;
+
         return $this;
     }
 
     /**
-     * Set chart height
+     * Set chart height.
      *
-     * @param integer $height
+     * @param int $height
      */
     public function setHeight($height)
     {
         $this->height = $height;
+
         return $this;
     }
 
     /**
-     * Set chart dimensions (width, height)
+     * Set chart dimensions (width, height).
      *
-     * @param integer $width
-     * @param integer $height
+     * @param int $width
+     * @param int $height
      */
     public function setDimensions($width, $height)
     {
         $this->width = $width;
         $this->height = $height;
+
         return $this;
     }
 
     /**
-     * Set if chart is responsive (will ignore dimensions if true)
+     * Set if chart is responsive (will ignore dimensions if true).
      *
-     * @param boolean $responsive
+     * @param bool $responsive
      */
     public function setResponsive($responsive)
     {
         $this->responsive = $responsive;
+
         return $this;
     }
 
     /**
-     * Return and array of all the chart settings
+     * Return and array of all the chart settings.
      */
     public function settings()
     {
@@ -173,13 +183,13 @@ class Chart
     }
 
     /**
-     * Render the chart
+     * Render the chart.
      */
     public function render()
     {
         try {
-            return include __DIR__ . "/Templates/$this->library.$this->type.php";
-        } catch(Exception $e){
+            return include __DIR__."/Templates/$this->library.$this->type.php";
+        } catch (Exception $e) {
             throw new \Exception($e->getMessage());
         }
     }
