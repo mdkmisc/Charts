@@ -1,10 +1,9 @@
 # Charts
 
+## Charts is a multi-library chart package to create interactive charts using laravel.
+
 [![StyleCI](https://styleci.io/repos/69124179/shield?branch=master)](https://styleci.io/repos/69124179)
 ![StyleCI](https://img.shields.io/badge/Built_for-Laravel-00C853.svg?style=flat-square)
-
-
-Charts is a multi-library chart package to create interactive charts using laravel.
 
 ![Example Chart](https://i.gyazo.com/2ea6d7af4f467e882c38af88095cb062.png)
 
