@@ -7,18 +7,18 @@ Charts is a multi-library chart package to create interactive charts using larav
 
 Charts include the following libraries by default:
 
-- ChartJS
-- Highcharts
-- Google
+- ChartJS  ```chartjs```
+- Highcharts  ```highcharts```
+- Google  ```google```
 
 ## Types
 
 Charts include the following chart types by default:
 
-- Pie Chart
-- Line Chart
-- Bar Chart
-- Geo Chart
+- Pie Chart ```pie```
+- Line Chart  ```line```
+- Bar Chart  ```bar```
+- Geo Chart  ```geo```
 
 ## Installation
 
