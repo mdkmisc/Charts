@@ -15,11 +15,11 @@ class ChartsServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../config/charts.php' => config_path('charts.php'),
-        ], 'config');
+        ], 'charts_config');
 
         $this->publishes([
             __DIR__.'/Assets' => public_path('vendor/consoletvs/charts'),
-        ], 'assets');
+        ], 'charts_assets');
 
     }
 
