@@ -3,6 +3,8 @@
 
 Charts is a multi-library chart package to create interactive charts using laravel.
 
+![Example Chart](https://i.gyazo.com/2ea6d7af4f467e882c38af88095cb062.png)
+
 ## Libraries
 
 Charts include the following libraries by default:
