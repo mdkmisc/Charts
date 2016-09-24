@@ -1,0 +1,12 @@
+{
+    "name": "consoletvs/charts",
+    "description": "Create charts for laravel using diferent charts libraries",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Erik Campobadal",
+            "email": "soc@erik.cat"
+        }
+    ],
+    "minimum-stability": "dev"
+}
