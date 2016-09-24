@@ -111,63 +111,63 @@ Example View:
 
 ## Chart Examples
 
-- Pie
+### Pie
 
-  ```
-  Charts::new('pie', 'highcharts')
-		->setTitle('My nice chart')
-		->setLabels(['First', 'Second', 'Third'])
-		->setValues([5,10,20])
-		->setDimensions(1000,500)
-		->setResponsive(false);
-  ```
+```
+Charts::new('pie', 'highcharts')
+	->setTitle('My nice chart')
+	->setLabels(['First', 'Second', 'Third'])
+	->setValues([5,10,20])
+	->setDimensions(1000,500)
+	->setResponsive(false);
+```
+
+![Example Pie](https://i.gyazo.com/b61a0a5786a8f70daf61398d256366b8.png)
   
-  ![Example Pie](https://i.gyazo.com/b61a0a5786a8f70daf61398d256366b8.png)
-  
-- Line
+### Line
 
-  ```
-  Charts::new('line', 'highcharts')
-		->setTitle('My nice chart')
-		->setElementLabel('My nice label')
-		->setLabels(['First', 'Second', 'Third'])
-		->setValues([5,10,20])
-		->setDimensions(1000,500)
-		->setResponsive(false);
-  ```
-  
-  ![Example Line](https://i.gyazo.com/121736e3b8aa7f22ad17a7c0ceecac02.png)
+```
+Charts::new('line', 'highcharts')
+	->setTitle('My nice chart')
+	->setElementLabel('My nice label')
+	->setLabels(['First', 'Second', 'Third'])
+	->setValues([5,10,20])
+	->setDimensions(1000,500)
+	->setResponsive(false);
+```
 
-- Bar
+![Example Line](https://i.gyazo.com/121736e3b8aa7f22ad17a7c0ceecac02.png)
 
-  ```
-  Charts::new('bar', 'highcharts')
-		->setTitle('My nice chart')
-		->setElementLabel('My nice label')
-		->setLabels(['First', 'Second', 'Third'])
-		->setValues([5,10,20])
-		->setDimensions(1000,500)
-		->setResponsive(false);
-  ```
-  
-  ![Example Bar](https://i.gyazo.com/94ada1aac091ef3cbc84433a3425a9aa.png)
+### Bar
 
-- Geo
+```
+Charts::new('bar', 'highcharts')
+	->setTitle('My nice chart')
+	->setElementLabel('My nice label')
+	->setLabels(['First', 'Second', 'Third'])
+	->setValues([5,10,20])
+	->setDimensions(1000,500)
+	->setResponsive(false);
+```
 
-  Note: The labels must have the country codes, not the name.
+![Example Bar](https://i.gyazo.com/94ada1aac091ef3cbc84433a3425a9aa.png)
 
-  ```
-  Charts::new('geo', 'highcharts')
-		->setTitle('My nice chart')
-		->setElementLabel('My nice label')
-		->setLabels(['ES', 'FR', 'RU'])
-		->setColors(['#C5CAE9', '#283593'])
-		->setValues([5,10,20])
-		->setDimensions(1000,500)
-		->setResponsive(false);
-  ```
-  
-  ![Example Geo](https://i.gyazo.com/f7a76582e80912864c6cfb23f688e43e.png)
+### Geo
+
+Note: The labels must have the country codes, not the name.
+
+```
+Charts::new('geo', 'highcharts')
+	->setTitle('My nice chart')
+	->setElementLabel('My nice label')
+	->setLabels(['ES', 'FR', 'RU'])
+	->setColors(['#C5CAE9', '#283593'])
+	->setValues([5,10,20])
+	->setDimensions(1000,500)
+	->setResponsive(false);
+```
+
+![Example Geo](https://i.gyazo.com/f7a76582e80912864c6cfb23f688e43e.png)
 
 
 ## Charts Functions
