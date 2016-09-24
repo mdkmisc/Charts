@@ -113,6 +113,8 @@ Example View:
 
 ### Pie
 
+Note: ```highcharts``` can't change the color of this chart. Well it can but it's complicated, so I leave it here.
+
 ```
 Charts::new('pie', 'highcharts')
 	->setTitle('My nice chart')
@@ -139,6 +141,8 @@ Charts::new('line', 'highcharts')
 ![Example Line](https://i.gyazo.com/121736e3b8aa7f22ad17a7c0ceecac02.png)
 
 ### Bar
+
+Note: ```highcharts``` can't change the color of this chart. Well it can but it's complicated, so I leave it here.
 
 ```
 Charts::new('bar', 'highcharts')
