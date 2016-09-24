@@ -8,5 +8,13 @@
             "email": "soc@erik.cat"
         }
     ],
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "ConsoleTVs\\Charts\\": "src/"
+        }
+    },
     "minimum-stability": "dev"
 }
