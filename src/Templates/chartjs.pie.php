@@ -1,4 +1,5 @@
 <?php
+
 $graph = "
     <canvas id='$this->id' width='$this->width' height='$this->height'></canvas>
     <script>
@@ -6,24 +7,28 @@ $graph = "
         var myChart = new Chart(ctx, {
             type: 'pie',
             data: {
-                labels: ["; foreach($this->labels as $label){$graph .= "'" . $label . "',";} $graph .="],
+                labels: ["; foreach ($this->labels as $label) {
+    $graph .= "'".$label."',";
+} $graph .= '],
                 datasets: [{
-                    data: ["; foreach($this->values as $dta){$graph .= $dta . ',';} $graph .="],
-                    backgroundColor: [";
-                    if($this->colors){
-                        foreach($this->colors as $color){
-                            $graph .= "'" . $color . "',";
+                    data: ['; foreach ($this->values as $dta) {
+    $graph .= $dta.',';
+} $graph .= '],
+                    backgroundColor: [';
+                    if ($this->colors) {
+                        foreach ($this->colors as $color) {
+                            $graph .= "'".$color."',";
                         }
                     } else {
-                        foreach($this->values as $dta){
-                            $graph .= "'" . sprintf('#%06X', mt_rand(0, 0xFFFFFF)) . "',";
+                        foreach ($this->values as $dta) {
+                            $graph .= "'".sprintf('#%06X', mt_rand(0, 0xFFFFFF))."',";
                         }
                     }
-                    $graph .="],
+                    $graph .= '],
                 }]
             },
             options: {
-                responsive: "; $this->responsive ? $graph .= 'true' : $graph .= 'false'; $graph .= ",
+                responsive: '; $this->responsive ? $graph .= 'true' : $graph .= 'false'; $graph .= ",
                 title: {
                     display: true,
                     text: '$this->title',
@@ -33,4 +38,5 @@ $graph = "
         });
     </script>
 ";
+
 return $graph;

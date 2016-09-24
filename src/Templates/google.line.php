@@ -1,4 +1,5 @@
 <?php
+
 $graph = "
     <script type='text/javascript'>
 
@@ -9,25 +10,29 @@ $graph = "
             ['Element', '$this->element_label'],
             ";
               $i = 0;
-              foreach($this->values as $dta){
+              foreach ($this->values as $dta) {
                   $e = $this->labels[$i];
                   $v = $dta;
                   $graph .= "['$e', $v],";
                   $i++;
               }
-              $graph .="
+              $graph .= '
         ]);
 
         var options = {
-            ";
-            if(!$this->responsive){ $graph .= "
+            ';
+            if (!$this->responsive) {
+                $graph .= "
                 height: $this->height,
                 width: $this->width,
-            "; }
+            ";
+            }
             $graph .= "
             fontSize: 12,
             title: '$this->title',
-            "; if($this->colors){ $graph .= "colors: ['" . $this->colors[0] . "'],"; } $graph .= "
+            "; if ($this->colors) {
+                $graph .= "colors: ['".$this->colors[0]."'],";
+            } $graph .= "
             legend: { position: 'top', alignment: 'end' }
         };
 
@@ -38,4 +43,5 @@ $graph = "
     </script>
     <div id='$this->id'></div>
 ";
+
 return $graph;

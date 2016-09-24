@@ -1,38 +1,47 @@
 <?php
+
 $graph = "
     <script type='text/javascript'>
       google.charts.setOnLoadCallback(drawPieChart);
       function drawPieChart() {
 
           var data = google.visualization.arrayToDataTable([
-              ['Element', '$this->element_label'"; if($this->colors){ $graph .= ", { role: 'style' }"; } $graph .= "],
-              ";
+              ['Element', '$this->element_label'"; if ($this->colors) {
+    $graph .= ", { role: 'style' }";
+} $graph .= '],
+              ';
                 $i = 0;
-                foreach($this->values as $dta){
+                foreach ($this->values as $dta) {
                     $e = $this->labels[$i];
                     $v = $dta;
-                    $graph .= "['$e', $v"; if($this->colors){ $graph .= ", '" . $this->colors[$i] . "'"; } $graph .= "],";
+                    $graph .= "['$e', $v";
+                    if ($this->colors) {
+                        $graph .= ", '".$this->colors[$i]."'";
+                    }
+                    $graph .= '],';
                     $i++;
                 }
-                $graph .="
+                $graph .= '
           ]);
 
         var options = {
-            ";
-            if(!$this->responsive){ $graph .= "
+            ';
+            if (!$this->responsive) {
+                $graph .= "
                 height: $this->height,
                 width: $this->width,
-            "; }
+            ";
+            }
             $graph .= "
             legend: { position: 'top', alignment: 'end' },
             fontSize: 12,
             title: '$this->title',";
-            if($this->colors){
-                $graph .= "colors:[";
-                foreach($this->colors as $color){
+            if ($this->colors) {
+                $graph .= 'colors:[';
+                foreach ($this->colors as $color) {
                     $graph .= "'$color',";
                 }
-                $graph .= "],";
+                $graph .= '],';
             }
         $graph .= "
         };
@@ -44,4 +53,5 @@ $graph = "
     </script>
     <div id='$this->id'></div>
 ";
+
 return $graph;

@@ -20,7 +20,6 @@ class ChartsServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/Assets' => public_path('vendor/consoletvs/charts'),
         ], 'charts_assets');
-
     }
 
     /**
