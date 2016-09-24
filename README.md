@@ -30,7 +30,7 @@ To install charts use composer
 composer require consoletvs/charts
 ```
 
-### Add service provider
+### Add service provider & alias
 
 Add the following service provider to the array in: ```config/app.php```
 
@@ -38,6 +38,11 @@ Add the following service provider to the array in: ```config/app.php```
 ConsoleTVs\Charts\ChartsServiceProvider::class,
 ```
 
+Add the following alias to the array in: ```config/app.php```
+
+```
+'Charts' => ConsoleTVs\Charts\Charts::class,
+```
 ### Publish the assets
 
 ```
