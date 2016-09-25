@@ -46,8 +46,8 @@ class Chart
         $this->values = [];
         $this->colors = [];
         $this->responsive = config('charts.default.responsive');
-		$length = 10; // The random identifier length.
-        $this->id = substr(str_shuffle(str_repeat($x='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
+        $length = 10; // The random identifier length.
+        $this->id = substr(str_shuffle(str_repeat($x = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length / strlen($x)))), 1, $length);
 
         // Set the chart library
         $this->library = $library ? $library : config('charts.default.library');
