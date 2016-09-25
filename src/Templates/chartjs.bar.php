@@ -8,7 +8,7 @@ $graph = "
             type: 'bar',
             data: {
                 labels: ["; foreach ($this->labels as $label) {
-    $graph .= "\"".$label."\",";
+    $graph .= '"'.$label.'",';
 } $graph .= "],
                 datasets: [
                     {
@@ -16,22 +16,22 @@ $graph = "
                         backgroundColor: [";
                         if ($this->colors) {
                             foreach ($this->colors as $color) {
-                                $graph .= "\"".$color."\",";
+                                $graph .= '"'.$color.'",';
                             }
                         } else {
                             foreach ($this->values as $dta) {
                                 $graph .= "'".sprintf('#%06X', mt_rand(0, 0xFFFFFF))."',";
                             }
                         }
-                        $graph .= "],
-                        data: ["; foreach ($this->values as $dta) {
+                        $graph .= '],
+                        data: ['; foreach ($this->values as $dta) {
                             $graph .= $dta.',';
-                        } $graph .= "],
+                        } $graph .= '],
                     }
                 ]
             },
             options: {
-                responsive: "; $this->responsive ? $graph .= 'true' : $graph .= 'false'; $graph .= ",
+                responsive: '; $this->responsive ? $graph .= 'true' : $graph .= 'false'; $graph .= ",
                 title: {
                     display: true,
                     text: '$this->title',

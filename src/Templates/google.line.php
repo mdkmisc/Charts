@@ -31,7 +31,7 @@ $graph = "
             fontSize: 12,
             title: \"$this->title\",
             "; if ($this->colors) {
-                $graph .= "colors: [\"".$this->colors[0]."\"],";
+                $graph .= 'colors: ["'.$this->colors[0].'"],';
             } $graph .= "
             legend: { position: 'top', alignment: 'end' }
         };

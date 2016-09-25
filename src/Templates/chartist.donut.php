@@ -10,7 +10,7 @@ $graph = '
     <script type='text/javascript'>
 		var data = {
 			labels: ["; foreach ($this->labels as $label) {
-    $graph .= "\"".$label."\",";
+    $graph .= '"'.$label.'",';
 } $graph .= '],
 		  series: ['; foreach ($this->values as $value) {
     $graph .= $value.',';
