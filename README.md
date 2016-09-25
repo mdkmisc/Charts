@@ -21,7 +21,7 @@ Charts include the following libraries & types by default:
 	- Line Chart  ```line```
 	- Bar Chart  ```bar```
 	- Geo Chart  ```geo```
-- Google  ```google```
+- Google Charts ```google```
 	- Pie Chart ```pie```
 	- Line Chart  ```line```
 	- Bar Chart  ```bar```
