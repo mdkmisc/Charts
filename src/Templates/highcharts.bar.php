@@ -17,7 +17,7 @@ $graph = "
                     type: 'column'
                 },
                 title: {
-                    text: '$this->title'
+                    text: \"$this->title\"
                 },
                 plotOptions: {
                    column: {
@@ -29,14 +29,14 @@ $graph = "
                     categories: [
                         ";
                         foreach ($this->labels as $label) {
-                            $graph .= "'$label',";
+                            $graph .= "\"$label\",";
                         }
                         $graph .= "
                     ],
                     crosshair: true
                 },
                 series: [{
-                    name: '$this->element_label',
+                    name: \"$this->element_label\",
                     data: [
                     ";
                     foreach ($this->values as $dta) {

@@ -27,7 +27,7 @@ $graph = "
                 $graph .= "
 
                 title : {
-                    text : '$this->title'
+                    text : \"$this->title\"
                 },
 
                 mapNavigation: {
@@ -38,11 +38,11 @@ $graph = "
                 colorAxis: {
                     min: $min,
                     "; if ($this->colors and count($this->colors) >= 2) {
-                    $graph .= "minColor: '".$this->colors[0]."',";
+                    $graph .= "minColor: \"".$this->colors[0]."\",";
                 } $graph .= "
                     max: $max,
                     "; if ($this->colors and count($this->colors) >= 2) {
-                    $graph .= "maxColor: '".$this->colors[1]."',";
+                    $graph .= "maxColor: \"".$this->colors[1]."\",";
                 } $graph .= '
                 },
 
@@ -52,14 +52,14 @@ $graph = "
                       foreach ($this->values as $dta) {
                           $e = $this->labels[$i];
                           $v = $dta;
-                          $graph .= "{'code': '$e', 'value': $v},";
+                          $graph .= "{'code': \"$e\", 'value': $v},";
                           $i++;
                       }
                       $graph .= "
                     ],
                     mapData: Highcharts.maps['custom/world'],
                     joinBy: ['iso-a2', 'code'],
-                    name: '$this->element_label',
+                    name: \"$this->element_label\",
                     states: {
                         hover: {
                             color: '#BADA55'

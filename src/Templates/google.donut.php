@@ -26,6 +26,7 @@ $graph = "
             }
             $graph .= "
             fontSize: 12,
+			pieHole: 0.4,
             title: \"$this->title\",";
             if ($this->colors) {
                 $graph .= 'colors:[';

@@ -4,7 +4,7 @@ $graph = "
     <script type='text/javascript'>
 		FusionCharts.ready(function () {
 			var revenueChart = new FusionCharts({
-				type: 'pie2d',
+				type: 'doughnut2d',
 				renderAt: '$this->id',
 				"; if ($this->responsive) {
     $graph .= "

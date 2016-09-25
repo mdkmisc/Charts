@@ -10,11 +10,16 @@ $graph = "
 } $graph .= "],
     	    datasets: [
     	        {
-					fill: false,
+					fill: true,
+					";
+						if($this->colors){
+							$graph .= "backgroundColor: \"" . $this->colors[0] . "\",";
+						}
+					$graph .= "
     	            label: \"$this->element_label\",
     	            lineTension: 0.3,
                     "; if ($this->colors) {
-    $graph .= "borderColor: \"".$this->colors[0]."\", backgroundColor: \"" . $this->colors[0] . "\",";
+    $graph .= "borderColor: \"".$this->colors[0]."\",";
 } $graph .= '
     	            data: ['; foreach ($this->values as $dta) {
     $graph .= $dta.',';

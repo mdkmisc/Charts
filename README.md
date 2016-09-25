@@ -13,27 +13,42 @@
 Charts include the following libraries & types by default:
 
 - ChartJS  ```chartjs```
-	- Pie Chart ```pie```
+	- Area Chart ```area```
 	- Line Chart  ```line```
 	- Bar Chart  ```bar```
+	- Pie Chart ```pie```
+	- Donut / Doughnut Chart ```donut```
 - Highcharts  ```highcharts```
-	- Pie Chart ```pie```
+	- Area Chart ```area```
 	- Line Chart  ```line```
 	- Bar Chart  ```bar```
+	- Pie Chart ```pie```
+	- Donut / Doughnut Chart ```donut```
 	- Geo Chart  ```geo```
 - Google Charts ```google```
-	- Pie Chart ```pie```
+	- Area Chart ```area```
 	- Line Chart  ```line```
 	- Bar Chart  ```bar```
+	- Pie Chart ```pie```
+	- Donut / Doughnut Chart ```donut```
 	- Geo Chart  ```geo```
 - Chartist  ```chartist```
-	- Pie Chart ```pie```
+	- Area Chart ```area```
 	- Line Chart  ```line```
 	- Bar Chart  ```bar```
+	- Pie Chart ```pie```
+	- Donut / Doughnut Chart ```donut```
 - FusionCharts  ```fusioncharts```
-	- Pie Chart ```pie```
+	- Area Chart ```area```
 	- Line Chart  ```line```
 	- Bar Chart  ```bar```
+	- Pie Chart ```pie```
+	- Donut / Doughnut Chart ```donut```
+- Morris JS  ```morris```
+	- Area Chart ```area```
+	- Line Chart  ```line```
+	- Bar Chart  ```bar```
+	- Donut / Doughnut Chart ```donut```
 
 ## Installation
 

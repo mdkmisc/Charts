@@ -24,6 +24,7 @@ $graph = "
                 },
                 plotOptions: {
                     pie: {
+						innerSize: 250,
                         allowPointSelect: true,
                         cursor: 'pointer',
                         dataLabels: {

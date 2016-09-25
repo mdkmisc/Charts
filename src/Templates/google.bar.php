@@ -6,7 +6,7 @@ $graph = "
       function drawPieChart() {
 
           var data = google.visualization.arrayToDataTable([
-              ['Element', '$this->element_label'"; if ($this->colors) {
+              ['Element', \"$this->element_label\""; if ($this->colors) {
     $graph .= ", { role: 'style' }";
 } $graph .= '],
               ';
@@ -14,7 +14,7 @@ $graph = "
                 foreach ($this->values as $dta) {
                     $e = $this->labels[$i];
                     $v = $dta;
-                    $graph .= "['$e', $v";
+                    $graph .= "[\"$e\", $v";
                     if ($this->colors) {
                         $graph .= ", '".$this->colors[$i]."'";
                     }
@@ -35,7 +35,7 @@ $graph = "
             $graph .= "
             legend: { position: 'top', alignment: 'end' },
             fontSize: 12,
-            title: '$this->title',";
+            title: \"$this->title\",";
             if ($this->colors) {
                 $graph .= 'colors:[';
                 foreach ($this->colors as $color) {

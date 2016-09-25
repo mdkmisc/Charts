@@ -12,16 +12,14 @@ $graph = '
 			labels: ["; foreach ($this->labels as $label) {
     $graph .= "\"".$label."\",";
 } $graph .= '],
-		  series: ['; foreach ($this->values as $value) {
+			series: [['; foreach ($this->values as $value) {
     $graph .= $value.',';
-} $graph .= "]
+} $graph .= ']]
 		};
 	
 		var options = {
-			chartPadding: 60,
-			labelOffset: 120,
-			labelDirection: 'explode',
-		  ";
+			showArea: true,
+		  ';
           if (!$this->responsive) {
               $graph .= "
 				width: $this->width,
@@ -30,7 +28,7 @@ $graph = '
           }
           $graph .= "
 		};
-		new Chartist.Pie('#$this->id', data, options);
+		new Chartist.Line('#$this->id', data, options);
     </script>
 ";
 

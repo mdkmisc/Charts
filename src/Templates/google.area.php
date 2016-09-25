@@ -36,7 +36,7 @@ $graph = "
             legend: { position: 'top', alignment: 'end' }
         };
 
-        var chart = new google.visualization.LineChart(document.getElementById('$this->id'));
+        var chart = new google.visualization.AreaChart(document.getElementById('$this->id'));
 
         chart.draw(data, options);
     }

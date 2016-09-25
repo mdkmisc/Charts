@@ -9,6 +9,7 @@ $graph = "
                     chart: {
                         width: $this->width,
                         height: $this->height,
+						type: 'area',
                     },";
 }
                 $graph .= "

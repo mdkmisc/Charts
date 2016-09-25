@@ -4,7 +4,7 @@ $graph = "
     <script type='text/javascript'>
 		FusionCharts.ready(function () {
 			var revenueChart = new FusionCharts({
-				type: 'pie2d',
+				type: 'area2d',
 				renderAt: '$this->id',
 				"; if ($this->responsive) {
     $graph .= "
@@ -23,32 +23,27 @@ $graph = "
 					'chart': {
 						'caption': \"$this->title\",
 						'yAxisName': \"$this->element_label\",
-						'paletteColors': '#0075c2',
+						";
+                            if ($this->colors) {
+                                $graph .= "
+									'paletteColors': \"".$this->colors[0].'",
+								';
+                            }
+                        $graph .= "
 						'bgColor': '#ffffff',
-						'showBorder': '0',
-						'use3DLighting': '0',
-						'showShadow': '0',
-						'enableSmartLabels': '1',
-						'startingAngle': '0',
-						'showPercentValues': '1',
-						'showPercentInTooltip': '0',
-						'decimals': '1',
-						'captionFontSize': '14',
-						'subcaptionFontSize': '14',
+						'borderAlpha': '20',
+						'canvasBorderAlpha': '0',
+						'usePlotGradientColor': '0',
+						'plotBorderAlpha': '10',
+						'rotatevalues': '1',
+						'valueFontColor': '#ffffff',                
+						'showXAxisLine': '1',
+						'xAxisLineColor': '#999999',
+						'divlineColor': '#999999',               
+						'divLineIsDashed': '1',
+						'showAlternateHGridColor': '0',
 						'subcaptionFontBold': '0',
-						'toolTipColor': '#ffffff',
-						'toolTipBorderThickness': '0',
-						'toolTipBgColor': '#000000',
-						'toolTipBgAlpha': '80',
-						'toolTipBorderRadius': '2',
-						'toolTipPadding': '5',
-						'showHoverEffect':'1',
-						'showLegend': '1',
-						'legendBgColor': '#ffffff',
-						'legendBorderAlpha': '0',
-						'legendShadow': '0',
-						'legendItemFontSize': '10',
-						'legendItemFontColor': '#666666'
+						'subcaptionFontSize': '14'
 					},            
 					'data': [
 						";
@@ -59,15 +54,8 @@ $graph = "
 									{
 										'label': \"$l\",
 										'value': \"$v\",
-										";
-                                if ($this->colors) {
-                                    $graph .= "
-												'color': \"".$this->colors[$i].'",
-											';
-                                }
-                                $graph .= '
 									}, 
-								';
+								";
                                 $i++;
                             }
                         $graph .= "

@@ -18,8 +18,9 @@ $graph = '
 		};
 	
 		var options = {
-			chartPadding: 60,
-			labelOffset: 120,
+			donut: true,
+			chartPadding: 30,
+			labelOffset: 50,
 			labelDirection: 'explode',
 		  ";
           if (!$this->responsive) {

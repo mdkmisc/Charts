@@ -5,7 +5,7 @@ $graph = "
     <script>
         var ctx = document.getElementById('$this->id');
         var myChart = new Chart(ctx, {
-            type: 'pie',
+            type: 'doughnut',
             data: {
                 labels: ["; foreach ($this->labels as $label) {
     $graph .= "'".$label."',";

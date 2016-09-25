@@ -20,4 +20,9 @@ return "
 	
 	<script type='text/javascript' src='".asset('/vendor/consoletvs/charts/fusioncharts/fusioncharts.js')."'></script>
 	<script type='text/javascript' src='".asset('/vendor/consoletvs/charts/fusioncharts/themes/fusioncharts.theme.fint.js')."'></script>
+	
+	<link rel='stylesheet' href='".asset('/vendor/consoletvs/charts/morris/morris.css')."'>
+	<script type='text/javascript' src='".asset('/vendor/consoletvs/charts/morris/raphael.min.js')."'></script>
+	<script type='text/javascript' src='".asset('/vendor/consoletvs/charts/morris/morris.min.js')."'></script>
+
 ";
