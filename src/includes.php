@@ -14,4 +14,7 @@ return "
     <script src='".asset('/vendor/consoletvs/charts/highmaps/maps/world.js')."'></script>
 
     <script src='".asset('/vendor/consoletvs/charts/chartjs/Chart.js')."'></script>
+	
+    <script src='".asset('/vendor/consoletvs/charts/chartist/chartist.min.js')."'></script>
+	<link rel='stylesheet' type='text/css' href='".asset('/vendor/consoletvs/charts/chartist/chartist.min.css')."' />
 ";
