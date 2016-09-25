@@ -8,22 +8,32 @@
 
 ![Example Chart](https://i.gyazo.com/2ea6d7af4f467e882c38af88095cb062.png)
 
-## Libraries
+## Libraries & Types
 
-Charts include the following libraries by default:
+Charts include the following libraries & types by default:
 
 - ChartJS  ```chartjs```
+	- Pie Chart ```pie```
+	- Line Chart  ```line```
+	- Bar Chart  ```bar```
 - Highcharts  ```highcharts```
+	- Pie Chart ```pie```
+	- Line Chart  ```line```
+	- Bar Chart  ```bar```
+	- Geo Chart  ```geo```
 - Google  ```google```
-
-## Types
-
-Charts include the following chart types by default:
-
-- Pie Chart ```pie```
-- Line Chart  ```line```
-- Bar Chart  ```bar```
-- Geo Chart  ```geo```
+	- Pie Chart ```pie```
+	- Line Chart  ```line```
+	- Bar Chart  ```bar```
+	- Geo Chart  ```geo```
+- Chartist  ```chartist```
+	- Pie Chart ```pie```
+	- Line Chart  ```line```
+	- Bar Chart  ```bar```
+- FusionCharts  ```fusioncharts```
+	- Pie Chart ```pie```
+	- Line Chart  ```line```
+	- Bar Chart  ```bar```
 
 ## Installation
 

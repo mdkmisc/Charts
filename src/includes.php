@@ -17,4 +17,7 @@ return "
 	
     <script src='".asset('/vendor/consoletvs/charts/chartist/chartist.min.js')."'></script>
 	<link rel='stylesheet' type='text/css' href='".asset('/vendor/consoletvs/charts/chartist/chartist.min.css')."' />
+	
+	<script type='text/javascript' src='".asset('/vendor/consoletvs/charts/fusioncharts/fusioncharts.js')."'></script>
+	<script type='text/javascript' src='".asset('/vendor/consoletvs/charts/fusioncharts/themes/fusioncharts.theme.fint.js')."'></script>
 ";
