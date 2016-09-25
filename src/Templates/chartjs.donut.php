@@ -17,7 +17,7 @@ $graph = "
                     backgroundColor: [';
                     if ($this->colors) {
                         foreach ($this->colors as $color) {
-                            $graph .= "\"".$color."\",";
+                            $graph .= '"'.$color.'",';
                         }
                     } else {
                         foreach ($this->values as $dta) {

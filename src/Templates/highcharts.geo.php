@@ -38,11 +38,11 @@ $graph = "
                 colorAxis: {
                     min: $min,
                     "; if ($this->colors and count($this->colors) >= 2) {
-                    $graph .= "minColor: \"".$this->colors[0]."\",";
+                    $graph .= 'minColor: "'.$this->colors[0].'",';
                 } $graph .= "
                     max: $max,
                     "; if ($this->colors and count($this->colors) >= 2) {
-                    $graph .= "maxColor: \"".$this->colors[1]."\",";
+                    $graph .= 'maxColor: "'.$this->colors[1].'",';
                 } $graph .= '
                 },
 

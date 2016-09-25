@@ -7,23 +7,23 @@ $graph = "
     	var data = {
     	    labels: ["; foreach ($this->labels as $label) {
     $graph .= "'".$label."',";
-} $graph .= "],
+} $graph .= '],
     	    datasets: [
     	        {
 					fill: true,
-					";
-						if($this->colors){
-							$graph .= "backgroundColor: \"" . $this->colors[0] . "\",";
-						}
-					$graph .= "
+					';
+                        if ($this->colors) {
+                            $graph .= 'backgroundColor: "'.$this->colors[0].'",';
+                        }
+                    $graph .= "
     	            label: \"$this->element_label\",
     	            lineTension: 0.3,
                     "; if ($this->colors) {
-    $graph .= "borderColor: \"".$this->colors[0]."\",";
-} $graph .= '
+                        $graph .= 'borderColor: "'.$this->colors[0].'",';
+                    } $graph .= '
     	            data: ['; foreach ($this->values as $dta) {
-    $graph .= $dta.',';
-} $graph .= "],
+                        $graph .= $dta.',';
+                    } $graph .= "],
     	        }
     	    ]
     	};

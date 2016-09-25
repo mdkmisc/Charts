@@ -18,7 +18,7 @@ $graph = "
                 },
                 xAxis: {
                     categories: ["; foreach ($this->labels as $label) {
-                    $graph .= "\"".$label."\",";
+                    $graph .= '"'.$label.'",';
                 } $graph .= "]
                 },
                 yAxis: {
@@ -33,13 +33,13 @@ $graph = "
                     }]
                 },
                 "; if ($this->colors) {
-                    $graph .= "
+                    $graph .= '
                         plotOptions: {
                             series: {
-                                color: \"".$this->colors[0]."\"
+                                color: "'.$this->colors[0].'"
                             }
                         },
-                    ";
+                    ';
                 }
                 $graph .= "
                 legend: {
