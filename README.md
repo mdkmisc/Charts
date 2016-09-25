@@ -15,6 +15,7 @@ Charts include the following libraries by default:
 - ChartJS  ```chartjs```
 - Highcharts  ```highcharts```
 - Google  ```google```
+- Chartist ```chartist```
 
 ## Types
 
