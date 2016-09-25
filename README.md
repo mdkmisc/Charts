@@ -153,7 +153,23 @@ Charts::new('pie', 'highcharts')
 ```
 
 ![Example Pie](https://i.gyazo.com/b61a0a5786a8f70daf61398d256366b8.png)
+
+### Donut / Doughnut
+
+Note: ```highcharts``` and ```chartist``` can't change the color of this chart. Well they can but it's complicated, so I leave it here.
+
+```
+Charts::new('donut', 'highcharts')
+	->setTitle('My nice chart')
+	->setLabels(['First', 'Second', 'Third'])
+	->setValues([5,10,20])
+	->setDimensions(1000,500)
+	->setResponsive(false);
+```
+
+![Example Donut](https://i.gyazo.com/fecef4a102cb348d0f7f3681120a600f.png)
   
+
 ### Line
 
 ```
@@ -167,6 +183,21 @@ Charts::new('line', 'highcharts')
 ```
 
 ![Example Line](https://i.gyazo.com/121736e3b8aa7f22ad17a7c0ceecac02.png)
+
+### Area
+
+```
+Charts::new('area', 'highcharts')
+	->setTitle('My nice chart')
+	->setElementLabel('My nice label')
+	->setLabels(['First', 'Second', 'Third'])
+	->setValues([5,10,20])
+	->setDimensions(1000,500)
+	->setResponsive(false);
+```
+
+![Example Area](https://i.gyazo.com/f6c500cf9bfc2e449d64ee19b7bb809c.png)
+
 
 ### Bar
 
