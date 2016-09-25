@@ -16,21 +16,21 @@ $graph = "
                 $graph .= "['$e', $v],";
                 $i++;
             }
-            $graph .= "
+            $graph .= '
         ]);
 
         var options = {
-          ";
-			if (!$this->responsive) {
+          ';
+            if (!$this->responsive) {
                 $graph .= "
 					height: $this->height,
 					width: $this->width,
 				";
-			}
-		  $graph .= "
-          colorAxis: {colors: ["; if ($this->colors and count($this->colors >= 2)) {
-                $graph .= "'".$this->colors[0]."', '".$this->colors[1]."'";
-            } $graph .= "]},
+            }
+          $graph .= '
+          colorAxis: {colors: ['; if ($this->colors and count($this->colors >= 2)) {
+              $graph .= "'".$this->colors[0]."', '".$this->colors[1]."'";
+          } $graph .= "]},
           datalessRegionColor: '#e0e0e0',
           defaultColor: '#607D8',
         };
@@ -40,7 +40,9 @@ $graph = "
         chart.draw(data, options);
       }
     </script>
-    <div "; if(!$this->responsive){ $graph .="style='max-height: $this->height; max-width: $this->width'"; } $graph .="><center><b style='font-family: Arial, Helvetica, sans-serif;font-size: 18px;'>$this->title</b><br><br></center></div>
+    <div "; if (!$this->responsive) {
+              $graph .= "style='max-height: $this->height; max-width: $this->width'";
+          } $graph .= "><center><b style='font-family: Arial, Helvetica, sans-serif;font-size: 18px;'>$this->title</b><br><br></center></div>
     <div id='$this->id'></div>
 ";
 

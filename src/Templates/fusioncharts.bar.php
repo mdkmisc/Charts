@@ -6,18 +6,18 @@ $graph = "
 			var revenueChart = new FusionCharts({
 				type: 'column2d',
 				renderAt: '$this->id',
-				"; if($this->responsive){
-						$graph .="
+				"; if ($this->responsive) {
+    $graph .= "
 							width: '100%',
 							height: '100%',
 						";
-					} else {
-						$graph .="
+} else {
+    $graph .= "
 							width: '$this->width',
 							height: '$this->height',
 						";
-					}
-				$graph .= "
+}
+                $graph .= "
 				dataFormat: 'json',
 				dataSource: {
 					'chart': {
@@ -41,24 +41,25 @@ $graph = "
 					},            
 					'data': [
 						";
-							$i = 0;
-							foreach($this->values as $v){
-								$l = $this->labels[$i];
-								$graph .= "
+                            $i = 0;
+                            foreach ($this->values as $v) {
+                                $l = $this->labels[$i];
+                                $graph .= "
 									{
 										'label': \"$l\",
 										'value': \"$v\",
-										"; if($this->colors){
-											$graph .= "
-												'color': \"" . $this->colors[$i] . "\",
-											";
-										}
-										$graph .= "
+										";
+                                if ($this->colors) {
+                                    $graph .= "
+												'color': \"".$this->colors[$i].'",
+											';
+                                }
+                                $graph .= '
 									}, 
-								";
-								$i++;
-							}
-						$graph .= "
+								';
+                                $i++;
+                            }
+                        $graph .= "
 					],
 				}
 			}).render();

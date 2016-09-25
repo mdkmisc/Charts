@@ -6,30 +6,30 @@ $graph = "
 			var revenueChart = new FusionCharts({
 				type: 'line',
 				renderAt: '$this->id',
-				"; if($this->responsive){
-						$graph .="
+				"; if ($this->responsive) {
+    $graph .= "
 							width: '100%',
 							height: '100%',
 						";
-					} else {
-						$graph .="
+} else {
+    $graph .= "
 							width: '$this->width',
 							height: '$this->height',
 						";
-					}
-				$graph .= "
+}
+                $graph .= "
 				dataFormat: 'json',
 				dataSource: {
 					'chart': {
 						'caption': \"$this->title\",
 						'yAxisName': \"$this->element_label\",
 						";
-							if($this->colors){
-								$graph .= "
-									'paletteColors': \"" . $this->colors[0] . "\",
-								";
-							}
-						$graph .= "
+                            if ($this->colors) {
+                                $graph .= "
+									'paletteColors': \"".$this->colors[0].'",
+								';
+                            }
+                        $graph .= "
 						'bgColor': '#ffffff',
 						'borderAlpha': '20',
 						'canvasBorderAlpha': '0',
@@ -47,18 +47,18 @@ $graph = "
 					},            
 					'data': [
 						";
-							$i = 0;
-							foreach($this->values as $v){
-								$l = $this->labels[$i];
-								$graph .= "
+                            $i = 0;
+                            foreach ($this->values as $v) {
+                                $l = $this->labels[$i];
+                                $graph .= "
 									{
 										'label': \"$l\",
 										'value': \"$v\",
 									}, 
 								";
-								$i++;
-							}
-						$graph .= "
+                                $i++;
+                            }
+                        $graph .= "
 					],
 				}
 			}).render();
