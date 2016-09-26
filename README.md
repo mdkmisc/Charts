@@ -52,6 +52,10 @@ Charts include the following libraries & types by default:
 
 ## Installation
 
+### Video Tutorial
+
+[![Video Tutorial](https://img.youtube.com/vi/IEhZTcpbknA/0.jpg)](https://www.youtube.com/watch?v=IEhZTcpbknA)
+
 To install charts use composer
 
 ### Download
