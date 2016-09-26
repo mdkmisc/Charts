@@ -7,6 +7,7 @@ return [
     |--------------------------------------------------------------------------
     */
     'default'   => [
+        'type'          => 'line',
         'library'       => 'google',
         'element_label' => 'Element',
         'title'         => 'My chart',
