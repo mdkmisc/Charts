@@ -208,7 +208,7 @@ class Chart
     }
 
     /**
-     * Return a random string
+     * Return a random string.
      *
      * @param int $length
      */
