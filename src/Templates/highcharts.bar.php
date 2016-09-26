@@ -3,14 +3,15 @@
 $graph = "
     <script type='text/javascript'>
         $(function () {
-            $('#$this->id').highcharts({
+            var chart = new Highcharts.Chart({
                 chart: {
                     "; if (!$this->responsive) {
     $graph .= "
+                        renderTo: \"$this->id\",
                         width: $this->width,
                         height: $this->height,";
 }
-                    $graph .= " 
+                    $graph .= "
                     plotBackgroundColor: null,
                     plotBorderWidth: null,
                     plotShadow: false,

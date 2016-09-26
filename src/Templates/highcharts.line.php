@@ -3,10 +3,11 @@
 $graph = "
     <script type='text/javascript'>
         $(function () {
-            $('#$this->id').highcharts({
+            var chart = new Highcharts.Chart({
                 "; if (!$this->responsive) {
     $graph .= "
                     chart: {
+                        renderTo: \"$this->id\",
                         width: $this->width,
                         height: $this->height,
                     },";

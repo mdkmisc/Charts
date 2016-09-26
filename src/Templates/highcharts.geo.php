@@ -13,13 +13,12 @@ foreach ($this->values as $dta) {
 $graph = "
     <script type='text/javascript'>
         $(function () {
-
-            // Initiate the chart
-            $('#$this->id').highcharts('Map', {
+            var chart = new Highcharts.Map({
 
                 "; if (!$this->responsive) {
     $graph .= "
                     chart: {
+                        renderTo: \"$this->id\",
                         width: $this->width,
                         height: $this->height,
                     },";
