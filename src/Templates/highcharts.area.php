@@ -3,16 +3,18 @@
 $graph = "
     <script type='text/javascript'>
         $(function () {
-            $('#$this->id').highcharts({
+            var chart = new Highcharts.Chart({
+                chart: {
+                    type: 'area',
+                    renderTo: \"$this->id\",
                 "; if (!$this->responsive) {
     $graph .= "
-                    chart: {
                         width: $this->width,
                         height: $this->height,
-						type: 'area',
-                    },";
+                    ";
 }
                 $graph .= "
+                },
                 title: {
                     text: \"$this->title\",
                     x: -20 //center
