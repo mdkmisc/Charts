@@ -126,7 +126,7 @@ Example View:
         <title>My Charts</title>
 
 		{!! Charts::assets() !!}
-	   
+
     </head>
     <body>
         <center>
@@ -168,7 +168,7 @@ Charts::new('donut', 'highcharts')
 ```
 
 ![Example Donut](https://i.gyazo.com/fecef4a102cb348d0f7f3681120a600f.png)
-  
+
 
 ### Line
 
@@ -240,31 +240,31 @@ Charts::new('geo', 'highcharts')
 - new()
 
   Returns a new chart instance, if no library is specified, the default one will be used.
-  
+
   ```
   Charts::new('line'');
   Charts::new('line', 'highcharts');
   ```
-  
+
 - assets()
 
   Returns all the assets to generate the graphs.
-  
+
   ```
   <?php echo Charts::assets(); ?>
-  
+
   // using blade
   {!! Charts::assets() !!}
   ```
-  
+
 - libraries()
 
   Returns an array of all the libraries available (can be filtered)
-  
+
   ```
   // Return all the libraries available
   print_r(Charts::libraries());
-  
+
   // Return all the libraries available for the line chart
   print_r(Charts::libraries('line'));
   ```
@@ -272,25 +272,33 @@ Charts::new('geo', 'highcharts')
 - types()
 
   Returns an array of all the chart types available (can be filtered)
-  
+
   ```
   // Return all the chart types available
   print_r(Charts::types());
-  
+
   // Return all the chart types available for the highcharts library
   print_r(Charts::libraries('highcharts'));
   ```
 
 ## Available Chart Settings:
 
+- setType()
+
+  Set the chart type after creation (Example: from line to pie)
+
+  ```
+  Charts::new('line', 'highcharts')->setType('pie');
+  ```
+
 - setLibrary()
 
-  Set the chart library after creations (Example: from highcharts to google)
+  Set the chart library after creation (Example: from highcharts to google)
 
   ```
   Charts::new('line', 'highcharts')->setLibrary('google');
   ```
-  
+
 - setLabels()
 
   The labels of the chart
@@ -298,11 +306,11 @@ Charts::new('geo', 'highcharts')
   ```
   Charts::new('line', 'highcharts')->setLabels(['First', 'Second', 'Third']);
   ```
-  
+
 - setValues()
-  
+
   The values of the chart respectively
-  
+
   ```
   Charts::new('line', 'highcharts')->setValues([10, 50, 100]);
   ```
@@ -314,7 +322,7 @@ Charts::new('geo', 'highcharts')
   ```
   Charts::new('line', 'highcharts')->setElementLabel('Total Views');
   ```
-  
+
 - setTitle()
 
   The chart title
@@ -370,7 +378,7 @@ Charts::new('geo', 'highcharts')
   ```
   print_r(Charts::new('line', 'highcharts')->settings());
   ```
-  
+
 - render()
 
   Render the chat!

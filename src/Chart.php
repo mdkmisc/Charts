@@ -32,11 +32,8 @@ class Chart
      *
      * @param $library
      */
-    public function __construct($type, $library = null)
+    public function __construct($type = null, $library = null)
     {
-        // Set the chart type
-        $this->type = $type;
-
         // Set the default chart data
         $this->title = config('charts.default.title');
         $this->height = config('charts.default.height');
@@ -47,10 +44,24 @@ class Chart
         $this->colors = [];
         $this->responsive = config('charts.default.responsive');
         $length = 10; // The random identifier length.
-        $this->id = substr(str_shuffle(str_repeat($x = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length / strlen($x)))), 1, $length);
+
+        // Set the chart type
+        $this->type = $type ? $type : config('charts.default.type');
 
         // Set the chart library
         $this->library = $library ? $library : config('charts.default.library');
+    }
+
+    /**
+     * Set chart type.
+     *
+     * @param string $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
     }
 
     /**
@@ -188,10 +199,21 @@ class Chart
      */
     public function render()
     {
+        $this->id = $this->randomString();
         try {
             return include __DIR__."/Templates/$this->library.$this->type.php";
         } catch (Exception $e) {
             throw new \Exception($e->getMessage());
         }
+    }
+
+    /**
+     * Return a random string
+     *
+     * @param int $length
+     */
+    public function randomString($length = 10)
+    {
+        return substr(str_shuffle(str_repeat($x = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length / strlen($x)))), 1, $length);
     }
 }
