@@ -5,9 +5,9 @@ $graph = "
         $(function () {
             var chart = new Highcharts.Chart({
                 chart: {
+			renderTo: \"$this->id\",
                     "; if (!$this->responsive) {
     $graph .= "
-                        renderTo: \"$this->id\",
                         width: $this->width,
                         height: $this->height,";
 }
@@ -25,7 +25,7 @@ $graph = "
                 },
                 plotOptions: {
                     pie: {
-						innerSize: 250,
+						innerSize: 225,
                         allowPointSelect: true,
                         cursor: 'pointer',
                         dataLabels: {
